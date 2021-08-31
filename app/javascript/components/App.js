@@ -3,7 +3,7 @@ import PropTypes from "prop-types"
 import { BrowserRouter as  Router, Route, Switch, NavLink } from "react-router-dom"
 
 import { Nav, NavItem } from "reactstrap"
-import "application.scss"
+// import "application.scss"
 
 import AboutUs from "./pages/AboutUs"
 import LearnMore from "./pages/LearnMore"
@@ -11,10 +11,32 @@ import Home from "./pages/Home"
 
 class App extends React.Component {
   render () {
+    const {
+      logged_in,
+      current_user,
+      new_user_route,
+      sign_in_route,
+      sign_out_route
+    } = this.props
+
     return (
       <React.Fragment>
-        <h1>Hello World</h1>
+        <br/>
+        <br/>
+        {
+          logged_in &&
+            <div>
+              <a href={sign_out_route}>Sign Out</a>
+            </div>
+        }
+        {
+          !logged_in &&
+            <div>
+              <a href={sign_in_route}>Sign In</a>
+            </div>
+        }
         <Router>
+          <br/>
           <Nav>
             <NavItem>
               <NavLink to="/">Home</NavLink>
