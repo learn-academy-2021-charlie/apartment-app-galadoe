@@ -1,7 +1,9 @@
 import React from "react"
 import PropTypes from "prop-types"
 import { BrowserRouter as  Router, Route, Switch, NavLink } from "react-router-dom"
+
 import { Nav, NavItem } from "reactstrap"
+import "application.scss"
 
 import AboutUs from "./pages/AboutUs"
 import LearnMore from "./pages/LearnMore"
