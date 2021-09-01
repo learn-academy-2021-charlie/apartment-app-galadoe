@@ -7,6 +7,9 @@ import { BrowserRouter as  Router, Route, Switch, NavLink } from "react-router-d
 
 import Header from "./components/Header"
 import Home from "./pages/Home"
+import NotFound from "./pages/NotFound"
+import ApartmentIndex from "./pages/ApartmentIndex"
+
 
 class App extends React.Component {
   constructor(props){
@@ -22,7 +25,7 @@ class App extends React.Component {
   }
 
   apartmentIndex = () => {
-    fetch("http://localhost:3000/apartment")
+    fetch("/apartments")
     .then(response => {
       return response.json()
     })
@@ -46,7 +49,7 @@ class App extends React.Component {
           <Switch>
              <Route exact path="/" component={Home} />
              <Route path="/apartmentindex"
-               render={ (props) => <Apartment apartments={ this.state.apartments } /> } />
+               render={ (props) => <ApartmentIndex apartments={ this.state.apartments } /> } />
              <Route component={ NotFound } />
            </Switch>
         </Router>
