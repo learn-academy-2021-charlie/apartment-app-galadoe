@@ -7,6 +7,7 @@ import PropTypes from "prop-types"
 
 
 import Header from "./components/Header"
+import Home from "./pages/Home"
 
 class App extends React.Component {
   constructor(props){
