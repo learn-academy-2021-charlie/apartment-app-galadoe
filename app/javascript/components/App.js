@@ -1,9 +1,8 @@
 import React from "react"
 import PropTypes from "prop-types"
-// import { BrowserRouter as  Router, Route, Switch, NavLink } from "react-router-dom"
-//
+import { BrowserRouter as  Router, Route, Switch, NavLink } from "react-router-dom"
+
 // import { Nav, NavItem } from "reactstrap"
-// import "application.scss"
 
 
 import Header from "./components/Header"
@@ -23,7 +22,7 @@ class App extends React.Component {
   }
 
   apartmentIndex = () => {
-    fetch("http://localhost:3000/apartments")
+    fetch("http://localhost:3000/apartment")
     .then(response => {
       return response.json()
     })

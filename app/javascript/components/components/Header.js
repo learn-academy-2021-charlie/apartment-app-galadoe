@@ -18,19 +18,6 @@ class Header extends Component {
 
     return(
       <>
-      <h1>This is a header</h1>
-      {
-          logged_in &&
-            <div>
-              <a href={sign_out_route}>Sign Out</a>
-            </div>
-        }
-        {
-          !logged_in &&
-            <div>
-              <a href={sign_in_route}>Sign In</a>
-            </div>
-        }
         <Router>
           <br/>
           <Nav>
