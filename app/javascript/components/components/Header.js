@@ -1,9 +1,15 @@
 import React, { Component } from 'react'
 import { BrowserRouter as  Router, Route, Switch, NavLink } from "react-router-dom"
 import { Nav, NavItem } from "reactstrap"
+<<<<<<< HEAD
 import Home from "./pages/Home"
 import AboutUs from "./pages/AboutUs"
 import LearnMore from "./pages/LearnMore"
+=======
+import Home from "../pages/Home"
+import AboutUs from "../pages/AboutUs"
+import LearnMore from "../pages/LearnMore"
+>>>>>>> cbec4080535f7ee9858e65963246b948a4f06c6a
 
 
 class Header extends Component {
@@ -18,6 +24,7 @@ class Header extends Component {
 
     return(
       <>
+<<<<<<< HEAD
       <h1>This is a header</h1>
       {
           logged_in &&
@@ -31,6 +38,8 @@ class Header extends Component {
               <a href={sign_in_route}>Sign In</a>
             </div>
         }
+=======
+>>>>>>> cbec4080535f7ee9858e65963246b948a4f06c6a
         <Router>
           <br/>
           <Nav>
