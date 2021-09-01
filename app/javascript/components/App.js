@@ -30,28 +30,17 @@ class App extends React.Component {
       return response.json()
     })
     .then(apartmentArray => this.setState({ apartments: apartmentArray}))
-    .catch(errors => console.log("Apartment read errors: "), errors)
+    .catch(errors => console.log("Apartment read errors: ", errors))
   }
 
 
   render () {
-    const {
-      logged_in,
-      current_user,
-      new_user_route,
-      sign_in_route,
-      sign_out_route
-    } = this.props
 
     return (
       <>
         <Router>
-          <Switch>
-             <Route exact path="/" component={Home} />
-             <Route path="/apartmentindex"
-               render={ (props) => <ApartmentIndex apartments={ this.state.apartments } /> } />
-             <Route component={ NotFound } />
-           </Switch>
+        <Header {...this.props}/>
+          
         </Router>
 
       </>

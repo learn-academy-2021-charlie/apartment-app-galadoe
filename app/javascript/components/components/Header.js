@@ -1,9 +1,9 @@
 import React, { Component } from 'react'
 import { BrowserRouter as  Router, Route, Switch, NavLink } from "react-router-dom"
 import { Nav, NavItem } from "reactstrap"
-import Home from "./pages/Home"
-import AboutUs from "./pages/AboutUs"
-import LearnMore from "./pages/LearnMore"
+import Home from "../pages/Home"
+import AboutUs from "../pages/AboutUs"
+import LearnMore from "../pages/LearnMore"
 
 
 class Header extends Component {
