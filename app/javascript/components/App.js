@@ -4,11 +4,12 @@ import { BrowserRouter as  Router, Route, Switch, NavLink } from "react-router-d
 
 // import { Nav, NavItem } from "reactstrap"
 
-
 import Header from "./components/Header"
 import Home from "./pages/Home"
-import NotFound from "./pages/NotFound"
+import AboutUs from "./pages/AboutUs"
+import LearnMore from "./pages/LearnMore"
 import ApartmentIndex from "./pages/ApartmentIndex"
+import ApartmentShow from "./pages/ApartmentShow"
 
 
 class App extends React.Component {
@@ -18,6 +19,8 @@ class App extends React.Component {
       apartments: []
     }
   }
+
+
 
   //render index with updated apartment array
   componentDidMount(){
@@ -36,12 +39,22 @@ class App extends React.Component {
 
   render () {
 
+
     return (
       <>
         <Router>
+        <br/>
+        <br/>
+
         <Header {...this.props}/>
-          
+        <Switch>
+          <Route exact path="/" component={ Home } />
+          <Route path="/about" component={ AboutUs } />
+          <Route path="/learn" component={ LearnMore } />
+          <Route path="/apartmentindex" component={ApartmentIndex}/>
+        </Switch>
         </Router>
+
 
       </>
     );
