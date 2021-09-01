@@ -6,7 +6,7 @@ class ApartmentIndex extends Component{
     super(props)
 
     this.state = {
-      
+
     }
   }
   render(){
