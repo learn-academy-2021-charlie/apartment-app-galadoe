@@ -30,7 +30,6 @@ apartment = [
     bedrooms: 3,
     bathrooms: 2,
     pets: 'only cats and dogs',
-    user_id: 1
   },
   {
     street: 'John Street',
@@ -42,10 +41,11 @@ apartment = [
     bedrooms: 2,
     bathrooms: 3,
     pets: 'no pets',
-    user_id: 2
   }
 ]
 
+galadoe = User.where(email: "kgaladoe@gmail.com").first
 apartment.each do |attribute|
-  Apartment.create attribute
+  galadoe.apartments.create attribute
   puts "creating apartment #{attribute}"
+end

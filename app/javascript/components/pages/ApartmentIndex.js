@@ -2,14 +2,9 @@ import React, { Component } from 'react'
 import { Container, Row, Col, Card, CardTitle } from 'reactstrap'
 
 class ApartmentIndex extends Component{
-  constructor(props){
-    super(props)
 
-    this.state = {
-
-    }
-  }
   render(){
+    console.log(this.props.apartments);
     return(
       <>
         <div>

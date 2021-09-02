@@ -6,8 +6,6 @@ import { BrowserRouter as  Router, Route, Switch, NavLink } from "react-router-d
 
 import Header from "./components/Header"
 import Home from "./pages/Home"
-import AboutUs from "./pages/AboutUs"
-import LearnMore from "./pages/LearnMore"
 import ApartmentIndex from "./pages/ApartmentIndex"
 import ApartmentShow from "./pages/ApartmentShow"
 import ApartmentNew from "./pages/ApartmentNew"
@@ -79,8 +77,6 @@ class App extends React.Component {
         <Header {...this.props}/>
         <Switch>
           <Route exact path="/" component={ Home } />
-          <Route path="/about" component={ AboutUs } />
-          <Route path="/learn" component={ LearnMore } />
           <Route path="/apartmentindex" render={(props) => <ApartmentIndex apartments={ this.state.apartments} />} />
           <Route path="/apartmentshow/:id" render={(props) => {
             let id = props.match.params.id
