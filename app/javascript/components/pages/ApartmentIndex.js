@@ -2,21 +2,16 @@ import React, { Component } from 'react'
 import { Container, Row, Col, Card, CardTitle } from 'reactstrap'
 
 class ApartmentIndex extends Component{
-  constructor(props){
-    super(props)
 
-    this.state = {
-
-    }
-  }
   render(){
+    console.log(this.props.apartments);
     return(
       <>
         <div>
           <h2>This is the Apartment Index Page</h2>
           <br />
           <Col sm="6">
-            {this.props.apartments.map(apartment => {
+            {this.props.apartments && this.props.apartments.map(apartment => {
               return(
                 <Card body key={ apartment.id }>
                   <CardTitle>

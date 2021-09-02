@@ -30,7 +30,7 @@ class ApartmentEdit extends Component {
   }
 
   handleSubmit = (e) => {
-    this.props.createApartment(this.state.form)
+    this.props.updateApartment(this.state.form)
     this.setState({submitted: true})
   }
 
@@ -46,7 +46,7 @@ class ApartmentEdit extends Component {
     return(
       <>
         <div>
-          <h3>Edit {this.props.apartments.street}'s information</h3>
+          <h3>Edit Apartment information</h3>
           <Form>
             <FormGroup>
               <Label for="street">Street</Label>

@@ -1,12 +1,7 @@
 import React, { Component } from 'react'
-import { BrowserRouter as  Router, Route, Switch, NavLink } from "react-router-dom"
+import { NavLink } from "react-router-dom"
 import { Nav, NavItem } from "reactstrap"
 
-
-
-import Home from "../pages/Home"
-import AboutUs from "../pages/AboutUs"
-import LearnMore from "../pages/LearnMore"
 
 
 class Header extends Component {
@@ -21,16 +16,15 @@ class Header extends Component {
 
     return(
       <>
-        <Router>
           <Nav>
             <NavItem>
               <NavLink to="/">Home</NavLink>
             </NavItem>
             <NavItem>
-              <NavLink to="/about">About Us</NavLink>
+              <NavLink to="/apartmentindex">Apartment Index</NavLink>
             </NavItem>
             <NavItem>
-              <NavLink to="/learn">Learn More</NavLink>
+              <NavLink to="/apartmentnew">Add Apartment</NavLink>
             </NavItem>
             <br/>
             {
@@ -46,8 +40,6 @@ class Header extends Component {
                   </div>
             }
           </Nav>
-
-        </Router>
       </>
     )
   }
