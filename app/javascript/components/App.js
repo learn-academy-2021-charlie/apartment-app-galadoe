@@ -11,6 +11,8 @@ import LearnMore from "./pages/LearnMore"
 import ApartmentIndex from "./pages/ApartmentIndex"
 import ApartmentShow from "./pages/ApartmentShow"
 import ApartmentNew from "./pages/ApartmentNew"
+import ApartmentEdit from "./pages/ApartmentEdit"
+import NotFound from "./pages/NotFound"
 
 
 class App extends React.Component {
@@ -52,6 +54,18 @@ class App extends React.Component {
       .catch(errors => console.log("Apartment create errors: ", errors))
   }
 
+  updateApartment = (apartment) => {
+    fetch(`/apartments/${apartments.id}`, {
+        body: JSON.stringify(apartment),
+        headers: {
+          "Content-Type": "application/json"
+        },
+        method: "PATCH"
+      })
+      .then(response => response.json())
+      .then(payload => this.apartmentIndex())
+      .catch(errors => console.log("Apartment update error: ", errors))
+  }
 
   render () {
 
@@ -73,6 +87,11 @@ class App extends React.Component {
             let apartment = this.state.apartments.find(apartment => apartment.id === +id)
             return <ApartmentShow apartment={apartment} /> }} />
           <Route path="/apartmentnew" render={ (props) => <ApartmentNew createApartment={this.createApartment} /> }/>
+          <Route path="/apartmentedit/:id" render={(props) => {
+            let id = props.match.params.id
+            let apartment = this.state.apartments.find(apartment => apartment.id === +id)
+            return <ApartmentEdit apartment={apartment} />  }} />
+          <Route component={NotFound} />
         </Switch>
         </Router>
 
