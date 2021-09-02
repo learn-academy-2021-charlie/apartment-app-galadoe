@@ -1,5 +1,5 @@
 import React, {Component} from "react"
-import { Container, Row, Col, Card, CardTitle, Cardbody, CardText, Button} from 'reactstrap'
+import { Container, Row, Col, Card, CardTitle, CardBody, CardText, Button, CardSubtitle} from 'reactstrap'
 import mockApartment from '../mockApartment'
 
 class ApartmentShow extends Component {
@@ -13,7 +13,7 @@ class ApartmentShow extends Component {
             <CardTitle>
               <h3>{`Location: ${apartment && apartment.street}, ${apartment && apartment.city}, ${apartment && apartment.state}`}</h3>
             </CardTitle>
-            <CardBody
+            <CardBody>
               <CardText>{`Want more info, contact ${apartment && apartment.manager} at ${apartment && apartment.email}`}</CardText>
             </CardBody>
             <CardSubtitle>
