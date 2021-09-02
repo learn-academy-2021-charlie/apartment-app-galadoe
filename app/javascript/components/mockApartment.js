@@ -10,7 +10,7 @@ const mockApartment = [
   bathrooms: 2,
   pets: 'pets allowed',
   user_id: 1
-  }
+  },
   {
     street: 'Apple Valley St.',
     city: 'Plymouth',

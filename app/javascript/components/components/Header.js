@@ -4,6 +4,11 @@ import { Nav, NavItem } from "reactstrap"
 
 
 
+import Home from "../pages/Home"
+import AboutUs from "../pages/AboutUs"
+import LearnMore from "../pages/LearnMore"
+
+
 class Header extends Component {
   render(){
     const {
