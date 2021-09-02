@@ -81,7 +81,7 @@ class App extends React.Component {
           <Route exact path="/" component={ Home } />
           <Route path="/about" component={ AboutUs } />
           <Route path="/learn" component={ LearnMore } />
-          <Route path="/apartmentindex" component={ApartmentIndex}/>
+          <Route path="/apartmentindex" render={(props) => <ApartmentIndex apartments={ this.state.apartments} />} />
           <Route path="/apartmentshow/:id" render={(props) => {
             let id = props.match.params.id
             let apartment = this.state.apartments.find(apartment => apartment.id === +id)
