@@ -46,7 +46,7 @@ class ApartmentEdit extends Component {
     return(
       <>
         <div>
-          <h3>Edit Apartment information</h3>
+          <h3>Edit {this.props.apartment.street}'s information</h3>
           <Form>
             <FormGroup>
               <Label for="street">Street</Label>

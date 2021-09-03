@@ -1,5 +1,6 @@
 import React, { Component } from 'react'
-import { Container, Row, Col, Card, CardTitle, CardSubtitle, CardBody, CardText, CardLink } from 'reactstrap'
+import { Container, Row, Col, Card, CardTitle, CardSubtitle, CardBody, CardText, CardLink, Button} from 'reactstrap'
+import { NavLink} from "react-router-dom"
 
 class ApartmentIndex extends Component{
 
@@ -20,9 +21,8 @@ class ApartmentIndex extends Component{
                             <CardSubtitle tag="h6" className="mb-2 text-muted">
                                 { `${apartment.bedrooms} bedrooms and ${apartment.bathrooms} baths. Monthly Rent: ${apartment.price}` }
                             </CardSubtitle>
-                            <CardBody>
-                                <CardText>{ `For more info please contact ${apartment.manager} at ${apartment.email}` }</CardText>
-                            </CardBody>
+                              <NavLink to={`/apartmentshow/${apartment.id}`}>More Details
+                              </NavLink>
                         </Card>
               )
             })}
