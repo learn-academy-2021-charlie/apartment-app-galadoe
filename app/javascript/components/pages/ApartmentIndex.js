@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import { Container, Row, Col, Card, CardTitle } from 'reactstrap'
+import { Container, Row, Col, Card, CardTitle, CardSubtitle, CardBody, CardText, CardLink } from 'reactstrap'
 
 class ApartmentIndex extends Component{
 
@@ -13,11 +13,17 @@ class ApartmentIndex extends Component{
           <Col sm="6">
             {this.props.apartments && this.props.apartments.map(apartment => {
               return(
-                <Card body key={ apartment.id }>
-                  <CardTitle>
-                    <h4>{apartment.street}</h4>
-                  </CardTitle>
-                </Card>
+                <Card body className="text-center" key={ apartment.id }>
+                            <CardTitle>
+                                <h4>{ `Address: ${apartment.street}, ${apartment.city}, ${apartment.state}` }</h4>
+                            </CardTitle>
+                            <CardSubtitle tag="h6" className="mb-2 text-muted">
+                                { `${apartment.bedrooms} bedrooms and ${apartment.bathrooms} baths. Monthly Rent: ${apartment.price}` }
+                            </CardSubtitle>
+                            <CardBody>
+                                <CardText>{ `For more info please contact ${apartment.manager} at ${apartment.email}` }</CardText>
+                            </CardBody>
+                        </Card>
               )
             })}
           </Col>

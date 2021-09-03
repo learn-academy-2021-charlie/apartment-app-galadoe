@@ -14,10 +14,9 @@ class ApartmentNew extends Component {
         manager: "",
         email: "",
         price: "",
-        bedrooms: "",
-        bathrooms: "",
-        pets: "",
-        user_id: this.props.current_user
+        bedrooms: 0,
+        bathrooms: 0,
+        pets: ""
       },
       submitted: false
     }
@@ -29,9 +28,9 @@ class ApartmentNew extends Component {
     this.setState({ form: form})
   }
 
-  handleSubmit = (e) => {
+  handleSubmit = () => {
     this.props.createApartment(this.state.form)
-    this.setState({submitted: true})
+    this.setState({ submitted: true })
   }
 
   render(){
@@ -90,7 +89,7 @@ class ApartmentNew extends Component {
             </FormGroup>
             <FormGroup>
               <Label for="bedrooms">Bedrooms</Label>
-              <Input type="number"
+              <Input type="integer"
               name="bedrooms"
               onChange={this.handleChange}
               value={this.state.form.bedrooms}
@@ -98,7 +97,7 @@ class ApartmentNew extends Component {
             </FormGroup>
             <FormGroup>
               <Label for="bathrooms">Bathrooms</Label>
-              <Input type="number"
+              <Input type="integer"
               name="bathrooms"
               onChange={this.handleChange}
               value={this.state.form.bathrooms}

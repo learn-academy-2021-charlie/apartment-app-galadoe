@@ -28,6 +28,7 @@ class App extends React.Component {
     this.apartmentIndex()
   }
 
+  //index fetch
   apartmentIndex = () => {
     fetch("/apartments")
     .then(response => {
@@ -52,6 +53,7 @@ class App extends React.Component {
       .catch(errors => console.log("Apartment create errors: ", errors))
   }
 
+  //update fetch 
   updateApartment = (apartment) => {
     fetch(`/apartments/${apartments.id}`, {
         body: JSON.stringify(apartment),

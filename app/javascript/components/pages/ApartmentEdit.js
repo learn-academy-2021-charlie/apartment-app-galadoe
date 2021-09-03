@@ -97,23 +97,23 @@ class ApartmentEdit extends Component {
               />
             </FormGroup>
             <FormGroup>
-              <Label for="street">Bedroom</Label>
-              <Input type="number"
-              name="bedroom"
+              <Label for="Bedroom">Bedroom</Label>
+              <Input type="integer"
+              name="bedrooms"
               onChange={this.handleChange}
               value={this.state.form.bedroom}
               />
             </FormGroup>
             <FormGroup>
-              <Label for="street">Bathroom</Label>
-              <Input type="number"
-              name="bathroom"
+              <Label for="bathroom">Bathroom</Label>
+              <Input type="integer"
+              name="bathrooms"
               onChange={this.handleChange}
               value={this.state.form.bathroom}
               />
             </FormGroup>
             <FormGroup>
-              <Label for="street">Pets</Label>
+              <Label for="pets">Pets</Label>
               <Input type="text"
               name="pets"
               onChange={this.handleChange}
