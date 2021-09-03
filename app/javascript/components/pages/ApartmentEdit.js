@@ -129,7 +129,7 @@ class ApartmentEdit extends Component {
           </button>
         </div>
 
-        {this.state.submitted && <Redirect to={`/apartmentshow/${this.state.form.id}`} /> }
+        {this.state.submitted && <Redirect to={`/apartmentshow/${this.state.form}`} /> }
       </>
       )
     }
