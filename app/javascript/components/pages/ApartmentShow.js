@@ -29,11 +29,18 @@ class ApartmentShow extends Component {
               <h3>{`Location: ${apartment && apartment.street}, ${apartment && apartment.city}, ${apartment && apartment.state}`}</h3>
             </CardTitle>
             <CardBody>
+              <CardText>
+                { `${apartment && apartment.bedrooms} bedrooms | ${apartment && apartment.bathrooms} baths`}
+              </CardText>
+              <CardText>
+                {`Monthly Rent: ${apartment && apartment.price}`}
+              </CardText>
+              <CardText>
+                {`Pets: ${apartment && apartment.pets}`}
+              </CardText>
               <CardText>{`Want more info, contact ${apartment && apartment.manager} at ${apartment && apartment.email}`}</CardText>
             </CardBody>
-            <CardSubtitle>
-              { `${apartment && apartment.bedrooms} bedrooms and ${apartment && apartment.bathrooms} baths. Monthly Rent: ${apartment && apartment.price}` }
-            </CardSubtitle>
+
           </Card>
           <Button className="button-style">
             <NavLink to={`/apartmentedit/${apartment.id}`} id="edit-nav">Edit Apartment</NavLink>
